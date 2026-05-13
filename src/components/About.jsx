@@ -1,7 +1,12 @@
 function About() {
   return (
-    <div style={{ background: "orange", padding: "50px" }}>
-      ABOUT TEST
+    <div>
+        <h1>
+            ANGEL
+        </h1>
+        <h2>
+            BAJRACHARYA
+        </h2>
     </div>
   );
 }
