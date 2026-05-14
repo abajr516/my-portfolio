@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div>
-      <Hero />
       <h1>Hello, my portfolio is working</h1>
     </div>
   );
