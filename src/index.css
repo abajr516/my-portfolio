@@ -4,24 +4,43 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Start background style */
 :root {
-  /* Nebula Color Palette */
-  --bg-primary: #02040a;      /* near-black space */
-  --bg-secondary: #070a1a;    /* deep space blue */
-  --bg-tertiary: #0b1024;     /* darker indigo */
+  /* Nebula & Aurora Color Palette */
+  --bg-primary: #031B1F;      /* near-black cosmic void */
+  --bg-secondary: #0B1E36;    /* deep space blue-green */
+  --bg-tertiary: #134A64;     /* darker teal-indigo */
+  
+  --text-primary: #ffffff;
+  --text-secondary: #c8e6de;  /* soft cyan-white */
+  --text-tertiary: #7a9d94;   /* muted aurora green */
+  
+  --accent-blue: #04616F;     /* cosmic teal */
+  --accent-purple: #134A64;   /* nebula purple */
+  --accent-green: #04D58D;    /* vibrant aurora green */
+  --accent-cyan: #02AF85;     /* bright cyan glow */
+  --accent-pink: #3E653C;     /* nebula rose */
+  
+  --border-color: #134A64;    /* aurora-tinted borders */
+  --border-light: #02AF85;
+  
+  /* Nebula & Aurora Gradients */
+  --gradient-accent: linear-gradient(
+    to right,
+    #04616F,
+    #134A64,
+    #04D58D,
+    #02AF85
+  );
+  
+  --gradient-subtle: linear-gradient(135deg, #0B1E36 0%, #134A64 100%);
+  --gradient-dark: linear-gradient(
+    to bottom,
+    #031B1F 0%,
+    #0B1E36 40%,
+    #134A64 100%
+  );
 
-  --text-primary: #ffffff;    /* stars */
-  --text-secondary: #cbd5e1;  /* soft white */
-  --text-tertiary: #94a3b8;   /* muted starlight */
-
-  --accent-blue: #3b82f6;     /* nebula blue */
-  --accent-purple: #a855f7;   /* nebula purple */
-  --accent-pink: #ec4899;     /* optional warm glow */
-
-  --accent-green: #22c55e;    /* subtle nebula green */
-
-  --border-color: #1f2a44;    /* faint space lines */
-  --border-light: #334155;
 
   /* Nebula Gradients */
   --gradient-accent: linear-gradient(
@@ -35,7 +54,6 @@ html {
   --gradient-subtle: linear-gradient(135deg, #070a1a, #0b1024);
   --gradient-dark: linear-gradient(to bottom, #02040a, #070a1a, #02040a);
 }
-
 body {
   margin: 0;
   min-height: 100vh;
@@ -50,117 +68,4 @@ body {
 
   color: var(--text-primary);
 }
-
-/*
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
-
-body {
-  margin: 0;
-}
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
-*/
+/* End background style */
